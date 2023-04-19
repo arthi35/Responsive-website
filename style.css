@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #082E4E;
+    height: 100vh;
+}
+
+nav{
+    background-color: rgb(29, 45, 95);
+    font-size: 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #BBD125;
+    position: sticky;
+    top: 0;
+    
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+   
+}
+
+nav  a{
+    text-decoration: none;
+   color: #BBD125;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    color: white;
+    /* font-weight: bolder; */
+}
+
+nav a:hover{
+    color:rgba(234, 180, 30);
+}
+
+a {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: white;
+    /* background-color: rgba(234, 180, 30);
+    color: rgb(226, 223, 17); */
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  li:a {
+    overflow: hidden;
+  }
+  
+  li a::after {
+    opacity :1;
+    transform: translate3d(-100%, 0, 0);
+  }
+  
+  li a:hover::after,
+  li a:focus::after{
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Scale from center */
+  li a::after {
+    opacity :1;
+    transform: scale(0);
+    transform-origin: center;
+  }
+  
+  li a:hover::after,
+  li a:focus::after{
+    transform: scale(1);
+  }
+
+  .menu-line{
+    height: 6px !important;
+    width: 5px !important;
+    background-color: #EAB41E;
+    color: white;
+    padding: 7px;
+    /* display: flex; */
+position: relative;
+    /* margin-top: 10px; */
+    /* margin: 3px; */
+    /* margin-bottom: 3px; */
+  }
+  div .menu-line li{
+    /* display: block; */
+    /* content: ".";
+    content: ".";
+    content: "."; */
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    /* padding-right: 70px; */
+    /* padding-bottom: 20px; */
+    /* margin-top: 0px;
+    margin-right: 100px;
+    margin-bottom: px;
+    margin-left: 0px; */
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    left: 0px;
+  }
+
+  .menu{
+    cursor: pointer;
+    display: none;
+  }
+
+  @media all and (max-width:640px){
+    nav{
+      flex-direction: column;
+    }
+    nav li{
+      display: block;
+      padding: 10px 0;
+    }
+    ul{
+      text-align: center;
+      padding: 0;
+      display: none;
+    }
+
+    .logo{
+      align-self: flex-start;
+      margin: 10px 0px 0px 30px;
+    }
+    .showmenu{
+      display: block;
+    }
+  }
+
+  .menu{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+
+  /* .menu-line li{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  } */
